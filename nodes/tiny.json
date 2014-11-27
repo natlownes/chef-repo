@@ -1,0 +1,2710 @@
+{
+  "name": "tiny",
+  "override": {
+    "srcinstall": {
+      "builddir": "/tmp/build"
+    }
+  },
+  "normal": {
+    "tags": [
+
+    ]
+  },
+  "default": {
+    "apt": {
+      "cacher-client": {
+        "restrict_environment": false
+      },
+      "cacher_dir": "/var/cache/apt-cacher-ng",
+      "cacher_interface": null,
+      "cacher_port": 3142,
+      "caching_server": false,
+      "compiletime": false,
+      "compile_time_update": false,
+      "key_proxy": "",
+      "cache_bypass": {
+      },
+      "periodic_update_min_delay": 86400,
+      "launchpad_api_version": "1.0",
+      "unattended_upgrades": {
+        "enable": false,
+        "update_package_lists": true,
+        "allowed_origins": [
+          "Ubuntu trusty"
+        ],
+        "package_blacklist": [
+
+        ],
+        "auto_fix_interrupted_dpkg": false,
+        "minimal_steps": false,
+        "install_on_shutdown": false,
+        "mail": null,
+        "mail_only_on_error": true,
+        "remove_unused_dependencies": false,
+        "automatic_reboot": false,
+        "dl_limit": null
+      }
+    },
+    "nat": {
+      "packages": [
+        "autossh",
+        "bash-completion",
+        "keychain",
+        "sshfs",
+        "tcpdump",
+        "tig",
+        "tmux",
+        "whois",
+        "zsh"
+      ],
+      "linux": {
+        "packages": [
+          "apache2-utils",
+          "build-essential",
+          "curl",
+          "dnsutils",
+          "encfs",
+          "exuberant-ctags",
+          "hfsplus",
+          "hfsprogs",
+          "hfsutils",
+          "htop",
+          "libpam-encfs",
+          "mercurial",
+          "protobuf-compiler",
+          "ruby",
+          "ruby-dev",
+          "wget"
+        ]
+      },
+      "darwin": {
+        "packages": [
+          "ctags",
+          "ruby19"
+        ]
+      },
+      "the_silver_searcher": {
+        "darwin": {
+          "build_dependencies": [
+            "automake",
+            "pcre",
+            "pkgconfig"
+          ]
+        },
+        "linux": {
+          "build_dependencies": [
+            "automake",
+            "liblzma-dev",
+            "libpcre3-dev",
+            "pkg-config",
+            "zlib1g-dev"
+          ]
+        },
+        "scm_url": "https://github.com/ggreer/the_silver_searcher.git"
+      },
+      "metal": {
+        "packages": [
+          "ario",
+          "autofs",
+          "chromium-browser",
+          "claws-mail",
+          "conky",
+          "feh",
+          "flashplugin-downloader",
+          "gimp",
+          "gmpc",
+          "gnupg-agent",
+          "imagemagick",
+          "keepassx",
+          "kpcli",
+          "libpq-dev",
+          "libqt4-sql-psql",
+          "liferea",
+          "mplayer",
+          "mtpfs",
+          "ncmpc",
+          "ncmpcpp",
+          "parcellite",
+          "pidgin",
+          "postgresql-client",
+          "powernap",
+          "python-qt4",
+          "python-qt4-sql",
+          "rxvt-unicode-256color",
+          "shutter",
+          "stterm",
+          "vlc",
+          "weechat-curses",
+          "xautomation",
+          "xbacklight",
+          "xbindkeys",
+          "zim"
+        ]
+      },
+      "tmux": {
+        "force_install": false,
+        "source_url": "http://downloads.sourceforge.net/tmux/tmux-1.9a.tar.gz",
+        "linux": {
+          "build_dependencies": [
+            "libevent-dev",
+            "libncurses5-dev"
+          ]
+        },
+        "darwin": {
+          "build_dependencies": [
+            "libevent",
+            "ncurses"
+          ]
+        }
+      },
+      "weechat": {
+        "src_url": "http://www.weechat.org/files/src/weechat-0.4.2.tar.bz2",
+        "build_dependencies": [
+          "build-essential",
+          "ca-certificates",
+          "cmake",
+          "gettext",
+          "libaspell-dev",
+          "libcurl4-gnutls-dev",
+          "libgcrypt11-dev",
+          "libgnutls-dev",
+          "liblua5.1-0-dev",
+          "libncursesw5-dev",
+          "libperl-dev",
+          "python-dev",
+          "ruby1.9.1-dev",
+          "tcl-dev",
+          "zlib1g-dev"
+        ],
+        "plugins": [
+          {
+            "path": ".weechat/python/growl.py",
+            "url": "http://weechat.org/files/scripts/growl.py"
+          },
+          {
+            "path": ".weechat/python/jabber.py",
+            "url": "http://weechat.org/files/scripts/jabber.py"
+          },
+          {
+            "path": ".weechat/python/shell.py",
+            "url": "http://weechat.org/files/scripts/shell.py"
+          },
+          {
+            "path": ".weechat/python/themes.py",
+            "url": "http://weechat.org/files/scripts/tinyurl.py"
+          },
+          {
+            "path": ".weechat/python/tinyurl.py",
+            "url": "http://weechat.org/files/scripts/tinyurl.py"
+          }
+        ]
+      },
+      "ssh": {
+        "auto_ssh_key_path": "Dropbox-sec/keys/doublev.int.vistarmedia.com",
+        "client_hostnames": [
+          "doublev"
+        ],
+        "server_hostname": "slab.phl.looting.biz",
+        "port_map": {
+          "22222": 22
+        }
+      },
+      "xterm": {
+        "font_packages": [
+          "fonts-inconsolata",
+          "xfonts-terminus"
+        ]
+      },
+      "wmii": {
+        "force_install": false,
+        "build_dependencies": [
+          {
+            "name": "libxft-dev"
+          },
+          {
+            "name": "libxft2"
+          },
+          {
+            "name": "libx11-dev"
+          },
+          {
+            "name": "libxext-dev"
+          },
+          {
+            "name": "libxt-dev"
+          },
+          {
+            "name": "libxrandr-dev"
+          },
+          {
+            "name": "libxinerama-dev"
+          },
+          {
+            "name": "libxrender-dev"
+          }
+        ],
+        "source_url": "http://dl.suckless.org/wmii/wmii+ixp-3.9b1.tbz"
+      },
+      "ruby": {
+        "rbenv": {
+          "scm_url": "https://github.com/sstephenson/rbenv.git",
+          "install_path": ".rbenv"
+        },
+        "ruby_build": {
+          "scm_url": "https://github.com/sstephenson/ruby-build.git",
+          "install_path": ".rbenv/plugins/ruby-build"
+        }
+      },
+      "gem_packages": [
+        {
+          "name": "gist"
+        }
+      ],
+      "golang": {
+        "scm_url": "https://code.google.com/p/go",
+        "install_path": "src/golang",
+        "force_install": false
+      },
+      "music_player_client": {
+        "gateway": {
+          "host": "slab.phl.looting.biz"
+        },
+        "server": {
+          "host": "10.30.5.101",
+          "port": 6600,
+          "port_streaming": 8000
+        },
+        "local": {
+          "port": 6600,
+          "port_streaming": 8991
+        },
+        "cache_size": 512
+      },
+      "mpdscribble": {
+        "username": "crabwhittaker",
+        "password": "d2ddc99cdef1151d13b717b2ec7faad2",
+        "mpd": {
+          "host": "localhost",
+          "port": "6600"
+        }
+      },
+      "browser": {
+        "package_path": "Downloads",
+        "default": "chromium-browser"
+      },
+      "dropbox": {
+        "force_install": false
+      },
+      "vim": {
+        "plugins": [
+          {
+            "path": ".vim/autoload/vim-pathogen",
+            "url": "git://github.com/tpope/vim-pathogen.git"
+          },
+          {
+            "path": ".vim/bundle/ag.vim",
+            "url": "git://github.com/rking/ag.vim.git"
+          },
+          {
+            "path": ".vim/bundle/ctrl-p.vim",
+            "url": "git://github.com/kien/ctrlp.vim.git"
+          },
+          {
+            "path": ".vim/bundle/fugitive",
+            "url": "git://github.com/tpope/vim-fugitive.git"
+          },
+          {
+            "path": ".vim/bundle/neocomplcache",
+            "url": "https://github.com/Shougo/neocomplcache.vim.git"
+          },
+          {
+            "path": ".vim/bundle/nerdtree",
+            "url": "git://github.com/scrooloose/nerdtree.git"
+          },
+          {
+            "path": ".vim/bundle/python-mode",
+            "url": "git://github.com/klen/python-mode.git"
+          },
+          {
+            "path": ".vim/bundle/supertab",
+            "url": "git://github.com/ervandew/supertab.git"
+          },
+          {
+            "path": ".vim/bundle/syntastic",
+            "url": "https://github.com/scrooloose/syntastic.git"
+          },
+          {
+            "path": ".vim/bundle/vim-addon-mw-utils",
+            "url": "git://github.com/MarcWeber/vim-addon-mw-utils.git"
+          },
+          {
+            "path": ".vim/bundle/vim-async-command",
+            "url": "git://github.com/pydave/AsyncCommand.git"
+          },
+          {
+            "path": ".vim/bundle/vim-clojure-static",
+            "url": "git://github.com/guns/vim-clojure-static.git"
+          },
+          {
+            "path": ".vim/bundle/vim-coffee-script",
+            "url": "git://github.com/kchmck/vim-coffee-script.git"
+          },
+          {
+            "path": ".vim/bundle/vim-colors-solarized",
+            "url": "git://github.com/altercation/vim-colors-solarized.git"
+          },
+          {
+            "path": ".vim/bundle/vim-cucumber",
+            "url": "git://github.com/tpope/vim-cucumber.git"
+          },
+          {
+            "path": ".vim/bundle/vim-easygrep",
+            "url": "git://github.com/vim-scripts/EasyGrep.git"
+          },
+          {
+            "path": ".vim/bundle/vim-elixir",
+            "url": "git://github.com/elixir-lang/vim-elixir.git"
+          },
+          {
+            "path": ".vim/bundle/vim-fakeclip",
+            "url": "git://github.com/kana/vim-fakeclip.git"
+          },
+          {
+            "path": ".vim/bundle/vim-flake8",
+            "url": "https://github.com/nvie/vim-flake8.git"
+          },
+          {
+            "path": ".vim/bundle/vim-foreplay",
+            "url": "git://github.com/tpope/vim-foreplay.git"
+          },
+          {
+            "path": ".vim/bundle/vim-git",
+            "url": "https://github.com/tpope/vim-git.git"
+          },
+          {
+            "path": ".vim/bundle/vim-gitsessions",
+            "url": "https://github.com/wting/gitsessions.vim.git"
+          },
+          {
+            "path": ".vim/bundle/vim-gocode",
+            "url": "https://github.com/Blackrush/vim-gocode.git"
+          },
+          {
+            "path": ".vim/bundle/vim-golang",
+            "url": "https://github.com/jnwhiteh/vim-golang.git"
+          },
+          {
+            "path": ".vim/bundle/vim-haml",
+            "url": "git://github.com/tpope/vim-haml.git"
+          },
+          {
+            "path": ".vim/bundle/vim-html5",
+            "url": "git://github.com/othree/html5.vim.git"
+          },
+          {
+            "path": ".vim/bundle/vim-jade",
+            "url": "git://github.com/digitaltoad/vim-jade.git"
+          },
+          {
+            "path": ".vim/bundle/vim-latex-live-preview",
+            "url": "git://github.com/xuhdev/vim-latex-live-preview.git"
+          },
+          {
+            "path": ".vim/bundle/vim-less",
+            "url": "https://github.com/groenewege/vim-less.git"
+          },
+          {
+            "path": ".vim/bundle/vim-literate-coffeescript",
+            "url": "https://github.com/mintplant/vim-literate-coffeescript.git"
+          },
+          {
+            "path": ".vim/bundle/vim-markdown",
+            "url": "git://github.com/tpope/vim-markdown.git"
+          },
+          {
+            "path": ".vim/bundle/vim-nerdcommenter",
+            "url": "git://github.com/scrooloose/nerdcommenter.git"
+          },
+          {
+            "path": ".vim/bundle/vim-powerline-1",
+            "url": "git://github.com/Lokaltog/vim-powerline.git"
+          },
+          {
+            "path": ".vim/bundle/vim-protobuf-syntax",
+            "url": "git://github.com/jdevera/vim-protobuf-syntax.git"
+          },
+          {
+            "path": ".vim/bundle/vim-ragtag",
+            "url": "git://github.com/tpope/vim-ragtag.git"
+          },
+          {
+            "path": ".vim/bundle/vim-rails",
+            "url": "git://github.com/tpope/vim-rails.git"
+          },
+          {
+            "path": ".vim/bundle/vim-rainbow-parenthesis",
+            "url": "git://github.com/kien/rainbow_parentheses.vim.git"
+          },
+          {
+            "path": ".vim/bundle/vim-rspec",
+            "url": "https://github.com/thoughtbot/vim-rspec.git"
+          },
+          {
+            "path": ".vim/bundle/vim-scala",
+            "url": "https://github.com/derekwyatt/vim-scala.git"
+          },
+          {
+            "path": ".vim/bundle/vim-snippets",
+            "url": "git://github.com/garbas/vim-snipmate.git"
+          },
+          {
+            "path": ".vim/bundle/vim-stylus",
+            "url": "https://github.com/wavded/vim-stylus.git"
+          },
+          {
+            "path": ".vim/bundle/vim-surround",
+            "url": "git://github.com/tpope/vim-surround.git"
+          },
+          {
+            "path": ".vim/bundle/vim-tabular",
+            "url": "git://github.com/godlygeek/tabular.git"
+          },
+          {
+            "path": ".vim/bundle/vim-tagbar",
+            "url": "git://github.com/majutsushi/tagbar.git"
+          },
+          {
+            "path": ".vim/bundle/vim-tbone",
+            "url": "git://github.com/tpope/vim-tbone.git"
+          },
+          {
+            "path": ".vim/bundle/vim-tlib",
+            "url": "git://github.com/tomtom/tlib_vim.git"
+          },
+          {
+            "path": ".vim/bundle/vim-tmux-navigator",
+            "url": "git://github.com/christoomey/vim-tmux-navigator.git"
+          },
+          {
+            "path": ".vim/bundle/vim-tslime",
+            "url": "git://github.com/jgdavey/tslime.vim.git"
+          },
+          {
+            "path": ".vim/bundle/vim-vividchalk",
+            "url": "git://github.com/tpope/vim-vividchalk.git"
+          },
+          {
+            "path": ".vim/colors/vim-luna",
+            "url": "git://github.com/Pychimp/vim-luna.git"
+          }
+        ],
+        "plugins_to_remove": [
+          {
+            "path": ".vim/bundle/vim-ack",
+            "url": "git://github.com/mileszs/ack.vim.git"
+          },
+          {
+            "path": ".vim/bundle/vim-matchit",
+            "url": "git://github.com/tsaleh/vim-matchit.git"
+          }
+        ]
+      }
+    }
+  },
+  "automatic": {
+    "network": {
+      "interfaces": {
+        "lo": {
+          "mtu": "65536",
+          "flags": [
+            "LOOPBACK",
+            "UP",
+            "LOWER_UP"
+          ],
+          "encapsulation": "Loopback",
+          "addresses": {
+            "127.0.0.1": {
+              "family": "inet",
+              "prefixlen": "8",
+              "netmask": "255.0.0.0",
+              "scope": "Node"
+            },
+            "::1": {
+              "family": "inet6",
+              "prefixlen": "128",
+              "scope": "Node"
+            }
+          },
+          "state": "unknown"
+        },
+        "eth0": {
+          "type": "eth",
+          "number": "0",
+          "mtu": "1500",
+          "flags": [
+            "BROADCAST",
+            "MULTICAST",
+            "UP"
+          ],
+          "encapsulation": "Ethernet",
+          "addresses": {
+            "20:89:84:C9:8C:D2": {
+              "family": "lladdr"
+            }
+          },
+          "state": "down"
+        },
+        "wlan0": {
+          "type": "wlan",
+          "number": "0",
+          "mtu": "1500",
+          "flags": [
+            "BROADCAST",
+            "MULTICAST",
+            "UP",
+            "LOWER_UP"
+          ],
+          "encapsulation": "Ethernet",
+          "addresses": {
+            "0C:84:DC:91:82:2B": {
+              "family": "lladdr"
+            },
+            "10.30.1.126": {
+              "family": "inet",
+              "prefixlen": "16",
+              "netmask": "255.255.0.0",
+              "broadcast": "10.30.255.255",
+              "scope": "Global"
+            },
+            "fe80::e84:dcff:fe91:822b": {
+              "family": "inet6",
+              "prefixlen": "64",
+              "scope": "Link"
+            }
+          },
+          "state": "up",
+          "arp": {
+            "10.30.1.1": "e0:cb:4e:26:4f:ac"
+          },
+          "routes": [
+            {
+              "destination": "default",
+              "family": "inet",
+              "via": "10.30.1.1",
+              "proto": "static"
+            },
+            {
+              "destination": "10.30.0.0/16",
+              "family": "inet",
+              "scope": "link",
+              "metric": "9",
+              "proto": "kernel",
+              "src": "10.30.1.126"
+            },
+            {
+              "destination": "fe80::/64",
+              "family": "inet6",
+              "metric": "256",
+              "proto": "kernel"
+            }
+          ]
+        },
+        "docker0": {
+          "type": "docker",
+          "number": "0",
+          "mtu": "1500",
+          "flags": [
+            "BROADCAST",
+            "MULTICAST",
+            "UP"
+          ],
+          "encapsulation": "Ethernet",
+          "addresses": {
+            "56:84:7A:FE:97:99": {
+              "family": "lladdr"
+            },
+            "172.17.42.1": {
+              "family": "inet",
+              "prefixlen": "16",
+              "netmask": "255.255.0.0",
+              "scope": "Global"
+            }
+          },
+          "state": "down",
+          "routes": [
+            {
+              "destination": "172.17.0.0/16",
+              "family": "inet",
+              "scope": "link",
+              "proto": "kernel",
+              "src": "172.17.42.1"
+            }
+          ]
+        }
+      },
+      "default_interface": "wlan0",
+      "default_gateway": "10.30.1.1"
+    },
+    "counters": {
+      "network": {
+        "interfaces": {
+          "lo": {
+            "rx": {
+              "bytes": "7189027",
+              "packets": "68746",
+              "errors": "0",
+              "drop": "0",
+              "overrun": "0"
+            },
+            "tx": {
+              "bytes": "7189027",
+              "packets": "68746",
+              "errors": "0",
+              "drop": "0",
+              "carrier": "0",
+              "collisions": "0"
+            }
+          },
+          "eth0": {
+            "tx": {
+              "queuelen": "1000",
+              "bytes": "0",
+              "packets": "0",
+              "errors": "0",
+              "drop": "0",
+              "carrier": "0",
+              "collisions": "0"
+            },
+            "rx": {
+              "bytes": "0",
+              "packets": "0",
+              "errors": "0",
+              "drop": "0",
+              "overrun": "0"
+            }
+          },
+          "wlan0": {
+            "tx": {
+              "queuelen": "1000",
+              "bytes": "144530011",
+              "packets": "820031",
+              "errors": "0",
+              "drop": "0",
+              "carrier": "0",
+              "collisions": "0"
+            },
+            "rx": {
+              "bytes": "1088367210",
+              "packets": "1117688",
+              "errors": "0",
+              "drop": "0",
+              "overrun": "0"
+            }
+          },
+          "docker0": {
+            "rx": {
+              "bytes": "0",
+              "packets": "0",
+              "errors": "0",
+              "drop": "0",
+              "overrun": "0"
+            },
+            "tx": {
+              "bytes": "0",
+              "packets": "0",
+              "errors": "0",
+              "drop": "0",
+              "carrier": "0",
+              "collisions": "0"
+            }
+          }
+        }
+      }
+    },
+    "ipaddress": "10.30.1.126",
+    "macaddress": "0C:84:DC:91:82:2B",
+    "languages": {
+      "mono": {
+        "version": "3.2.8",
+        "builddate": "3.2.8+dfsg-4ubuntu1) Copyright (C) "
+      },
+      "python": {
+        "version": "2.7.6",
+        "builddate": "Mar 22 2014, 22:59:56"
+      },
+      "c": {
+        "gcc": {
+          "version": "4.8.2",
+          "description": "gcc version 4.8.2 (Ubuntu 4.8.2-19ubuntu1) "
+        }
+      },
+      "perl": {
+        "version": "5.18.2",
+        "archname": "x86_64-linux-gnu-thread-multi"
+      },
+      "ruby": {
+        "platform": "x86_64-linux",
+        "version": "1.9.3",
+        "release_date": "2013-11-22",
+        "target": "x86_64-pc-linux-gnu",
+        "target_cpu": "x86_64",
+        "target_vendor": "pc",
+        "target_os": "linux",
+        "host": "x86_64-pc-linux-gnu",
+        "host_cpu": "x86_64",
+        "host_os": "linux-gnu",
+        "host_vendor": "pc",
+        "bin_dir": "/usr/bin",
+        "ruby_bin": "/usr/bin/ruby1.9.1",
+        "gems_dir": "/var/lib/gems/1.9.1",
+        "gem_bin": "/usr/bin/gem1.9.1"
+      },
+      "erlang": {
+        "version": "6.2",
+        "options": [
+          "SMP",
+          "ASYNC_THREADS"
+        ],
+        "emulator": "BEAM"
+      }
+    },
+    "ip6address": "fe80::e84:dcff:fe91:822b",
+    "filesystem": {
+      "/dev/mapper/tiny--vg-root": {
+        "kb_size": "13012096",
+        "kb_used": "12153324",
+        "kb_available": "174740",
+        "percent_used": "99%",
+        "mount": "/",
+        "total_inodes": "835584",
+        "inodes_used": "333426",
+        "inodes_available": "502158",
+        "inodes_percent_used": "40%",
+        "fs_type": "ext4",
+        "mount_options": [
+          "rw",
+          "errors=remount-ro"
+        ]
+      },
+      "none": {
+        "kb_size": "102400",
+        "kb_used": "24",
+        "kb_available": "102376",
+        "percent_used": "1%",
+        "mount": "/sys/fs/pstore",
+        "total_inodes": "239501",
+        "inodes_used": "15",
+        "inodes_available": "239486",
+        "inodes_percent_used": "1%",
+        "fs_type": "pstore",
+        "mount_options": [
+          "rw"
+        ]
+      },
+      "udev": {
+        "kb_size": "943160",
+        "kb_used": "4",
+        "kb_available": "943156",
+        "percent_used": "1%",
+        "mount": "/dev",
+        "total_inodes": "235790",
+        "inodes_used": "518",
+        "inodes_available": "235272",
+        "inodes_percent_used": "1%",
+        "fs_type": "devtmpfs",
+        "mount_options": [
+          "rw",
+          "mode=0755"
+        ]
+      },
+      "tmpfs": {
+        "kb_size": "191604",
+        "kb_used": "1164",
+        "kb_available": "190440",
+        "percent_used": "1%",
+        "mount": "/run",
+        "total_inodes": "239501",
+        "inodes_used": "546",
+        "inodes_available": "238955",
+        "inodes_percent_used": "1%",
+        "fs_type": "tmpfs",
+        "mount_options": [
+          "rw",
+          "noexec",
+          "nosuid",
+          "size=10%",
+          "mode=0755"
+        ]
+      },
+      "/dev/sda1": {
+        "kb_size": "240972",
+        "kb_used": "84276",
+        "kb_available": "144255",
+        "percent_used": "37%",
+        "mount": "/boot",
+        "total_inodes": "62248",
+        "inodes_used": "306",
+        "inodes_available": "61942",
+        "inodes_percent_used": "1%",
+        "fs_type": "ext2",
+        "mount_options": [
+          "rw"
+        ]
+      },
+      "/home/nat/.Private": {
+        "kb_size": "13012096",
+        "kb_used": "12153324",
+        "kb_available": "174740",
+        "percent_used": "99%",
+        "mount": "/home/nat",
+        "total_inodes": "835584",
+        "inodes_used": "333426",
+        "inodes_available": "502158",
+        "inodes_percent_used": "40%",
+        "fs_type": "ecryptfs",
+        "mount_options": [
+          "ecryptfs_check_dev_ruid",
+          "ecryptfs_cipher=aes",
+          "ecryptfs_key_bytes=16",
+          "ecryptfs_unlink_sigs",
+          "ecryptfs_sig=964aa0bd6cd44b69",
+          "ecryptfs_fnek_sig=e6aafc549d51324a"
+        ]
+      },
+      "proc": {
+        "mount": "/proc",
+        "fs_type": "proc",
+        "mount_options": [
+          "rw",
+          "noexec",
+          "nosuid",
+          "nodev"
+        ]
+      },
+      "sysfs": {
+        "mount": "/sys",
+        "fs_type": "sysfs",
+        "mount_options": [
+          "rw",
+          "noexec",
+          "nosuid",
+          "nodev"
+        ]
+      },
+      "devpts": {
+        "mount": "/dev/pts",
+        "fs_type": "devpts",
+        "mount_options": [
+          "rw",
+          "noexec",
+          "nosuid",
+          "gid=5",
+          "mode=0620"
+        ]
+      },
+      "binfmt_misc": {
+        "mount": "/proc/sys/fs/binfmt_misc",
+        "fs_type": "binfmt_misc",
+        "mount_options": [
+          "rw",
+          "noexec",
+          "nosuid",
+          "nodev"
+        ]
+      },
+      "rpc_pipefs": {
+        "mount": "/run/rpc_pipefs",
+        "fs_type": "rpc_pipefs",
+        "mount_options": [
+          "rw"
+        ]
+      },
+      "systemd": {
+        "mount": "/sys/fs/cgroup/systemd",
+        "fs_type": "cgroup",
+        "mount_options": [
+          "rw",
+          "noexec",
+          "nosuid",
+          "nodev",
+          "none",
+          "name=systemd"
+        ]
+      },
+      "gvfsd-fuse": {
+        "mount": "/run/user/1000/gvfs",
+        "fs_type": "fuse.gvfsd-fuse",
+        "mount_options": [
+          "rw",
+          "nosuid",
+          "nodev",
+          "user=nat"
+        ]
+      },
+      "sda1": {
+        "fs_type": "ext2",
+        "uuid": "c601a638-f69a-4e20-8270-a09e94b8004d"
+      },
+      "sda5": {
+        "fs_type": "LVM2_member",
+        "uuid": "KhPwKJ-28Hc-xLOY-jUJz-yns6-Nyd0-nrExhL"
+      },
+      "tiny--vg-root": {
+        "fs_type": "(dm-0)",
+        "uuid": "(dm-0)",
+        "label": "(dm-0)"
+      },
+      "tiny--vg-swap_1": {
+        "fs_type": "(dm-1)",
+        "uuid": "(dm-1)",
+        "label": "(dm-1)"
+      },
+      "loop0": {
+        "fs_type": "ext4",
+        "uuid": "cedaa524-b469-4497-9833-0bf9845420ae"
+      },
+      "docker-252:0-181103-pool": {
+        "fs_type": "(dm-2)",
+        "uuid": "(dm-2)",
+        "label": "(dm-2)"
+      },
+      "rootfs": {
+        "mount": "/",
+        "fs_type": "rootfs",
+        "mount_options": [
+          "rw"
+        ]
+      },
+      "cgroup": {
+        "mount": "/sys/fs/cgroup/cpuset",
+        "fs_type": "cgroup",
+        "mount_options": [
+          "rw",
+          "relatime",
+          "cpuset"
+        ]
+      }
+    },
+    "kernel": {
+      "name": "Linux",
+      "release": "3.17.0-031700-generic",
+      "version": "#201410060605 SMP Mon Oct 6 10:07:09 UTC 2014",
+      "machine": "x86_64",
+      "os": "GNU/Linux",
+      "modules": {
+        "xt_addrtype": {
+          "size": "12713",
+          "refcount": "2"
+        },
+        "xt_conntrack": {
+          "size": "12760",
+          "refcount": "1"
+        },
+        "ipt_MASQUERADE": {
+          "size": "12880",
+          "refcount": "1"
+        },
+        "iptable_nat": {
+          "size": "13110",
+          "refcount": "1"
+        },
+        "nf_conntrack_ipv4": {
+          "size": "14857",
+          "refcount": "2"
+        },
+        "nf_defrag_ipv4": {
+          "size": "12758",
+          "refcount": "1"
+        },
+        "nf_nat_ipv4": {
+          "size": "13316",
+          "refcount": "1"
+        },
+        "nf_nat": {
+          "size": "26308",
+          "refcount": "3"
+        },
+        "nf_conntrack": {
+          "size": "105636",
+          "refcount": "6"
+        },
+        "bridge": {
+          "size": "122058",
+          "refcount": "0"
+        },
+        "stp": {
+          "size": "12976",
+          "refcount": "1"
+        },
+        "llc": {
+          "size": "14441",
+          "refcount": "2"
+        },
+        "dm_thin_pool": {
+          "size": "57708",
+          "refcount": "1"
+        },
+        "dm_persistent_data": {
+          "size": "62569",
+          "refcount": "1"
+        },
+        "dm_bio_prison": {
+          "size": "15526",
+          "refcount": "1"
+        },
+        "dm_bufio": {
+          "size": "28196",
+          "refcount": "1"
+        },
+        "libcrc32c": {
+          "size": "12644",
+          "refcount": "1"
+        },
+        "iptable_filter": {
+          "size": "12810",
+          "refcount": "1"
+        },
+        "ip_tables": {
+          "size": "27718",
+          "refcount": "2"
+        },
+        "x_tables": {
+          "size": "34102",
+          "refcount": "5"
+        },
+        "ctr": {
+          "size": "13193",
+          "refcount": "1"
+        },
+        "ccm": {
+          "size": "17856",
+          "refcount": "1"
+        },
+        "snd_hda_codec_hdmi": {
+          "size": "52620",
+          "refcount": "1"
+        },
+        "snd_hda_codec_realtek": {
+          "size": "78564",
+          "refcount": "1"
+        },
+        "snd_hda_codec_generic": {
+          "size": "70087",
+          "refcount": "1"
+        },
+        "autofs4": {
+          "size": "39229",
+          "refcount": "1"
+        },
+        "dm_crypt": {
+          "size": "23456",
+          "refcount": "0"
+        },
+        "joydev": {
+          "size": "17587",
+          "refcount": "0"
+        },
+        "snd_hda_intel": {
+          "size": "30783",
+          "refcount": "3"
+        },
+        "snd_hda_controller": {
+          "size": "32234",
+          "refcount": "1"
+        },
+        "snd_hda_codec": {
+          "size": "145035",
+          "refcount": "5"
+        },
+        "snd_hwdep": {
+          "size": "17709",
+          "refcount": "1"
+        },
+        "snd_pcm": {
+          "size": "105052",
+          "refcount": "4"
+        },
+        "intel_rapl": {
+          "size": "19196",
+          "refcount": "0"
+        },
+        "x86_pkg_temp_thermal": {
+          "size": "14312",
+          "refcount": "0"
+        },
+        "intel_powerclamp": {
+          "size": "19099",
+          "refcount": "0"
+        },
+        "coretemp": {
+          "size": "13638",
+          "refcount": "0"
+        },
+        "snd_seq_midi": {
+          "size": "13564",
+          "refcount": "0"
+        },
+        "kvm_intel": {
+          "size": "149257",
+          "refcount": "0"
+        },
+        "arc4": {
+          "size": "12573",
+          "refcount": "2"
+        },
+        "snd_seq_midi_event": {
+          "size": "14899",
+          "refcount": "1"
+        },
+        "kvm": {
+          "size": "468567",
+          "refcount": "1"
+        },
+        "uvcvideo": {
+          "size": "86628",
+          "refcount": "0"
+        },
+        "crct10dif_pclmul": {
+          "size": "14268",
+          "refcount": "0"
+        },
+        "videobuf2_vmalloc": {
+          "size": "13216",
+          "refcount": "1"
+        },
+        "snd_rawmidi": {
+          "size": "31197",
+          "refcount": "1"
+        },
+        "crc32_pclmul": {
+          "size": "13180",
+          "refcount": "0"
+        },
+        "ath9k": {
+          "size": "157355",
+          "refcount": "0"
+        },
+        "ghash_clmulni_intel": {
+          "size": "13230",
+          "refcount": "0"
+        },
+        "cryptd": {
+          "size": "20531",
+          "refcount": "1"
+        },
+        "ath9k_common": {
+          "size": "25638",
+          "refcount": "1"
+        },
+        "videobuf2_memops": {
+          "size": "13362",
+          "refcount": "1"
+        },
+        "videobuf2_core": {
+          "size": "59907",
+          "refcount": "1"
+        },
+        "ath9k_hw": {
+          "size": "460121",
+          "refcount": "2"
+        },
+        "snd_seq": {
+          "size": "63540",
+          "refcount": "2"
+        },
+        "ath": {
+          "size": "29397",
+          "refcount": "3"
+        },
+        "v4l2_common": {
+          "size": "15715",
+          "refcount": "1"
+        },
+        "videodev": {
+          "size": "163831",
+          "refcount": "3"
+        },
+        "serio_raw": {
+          "size": "13483",
+          "refcount": "0"
+        },
+        "media": {
+          "size": "22008",
+          "refcount": "2"
+        },
+        "snd_seq_device": {
+          "size": "14497",
+          "refcount": "3"
+        },
+        "snd_timer": {
+          "size": "30118",
+          "refcount": "2"
+        },
+        "mac80211": {
+          "size": "696913",
+          "refcount": "1"
+        },
+        "ath3k": {
+          "size": "13381",
+          "refcount": "0"
+        },
+        "btusb": {
+          "size": "32408",
+          "refcount": "0"
+        },
+        "snd": {
+          "size": "84025",
+          "refcount": "17"
+        },
+        "mei_me": {
+          "size": "19524",
+          "refcount": "0"
+        },
+        "cfg80211": {
+          "size": "514757",
+          "refcount": "4"
+        },
+        "rfcomm": {
+          "size": "75114",
+          "refcount": "8"
+        },
+        "bnep": {
+          "size": "19884",
+          "refcount": "2"
+        },
+        "mei": {
+          "size": "88810",
+          "refcount": "1"
+        },
+        "soundcore": {
+          "size": "15091",
+          "refcount": "2"
+        },
+        "lpc_ich": {
+          "size": "21176",
+          "refcount": "0"
+        },
+        "bluetooth": {
+          "size": "477455",
+          "refcount": "23"
+        },
+        "parport_pc": {
+          "size": "32906",
+          "refcount": "0"
+        },
+        "ppdev": {
+          "size": "17711",
+          "refcount": "0"
+        },
+        "lp": {
+          "size": "17799",
+          "refcount": "0"
+        },
+        "parport": {
+          "size": "42481",
+          "refcount": "3"
+        },
+        "mac_hid": {
+          "size": "13275",
+          "refcount": "0"
+        },
+        "cyapa": {
+          "size": "13291",
+          "refcount": "0"
+        },
+        "chromeos_laptop": {
+          "size": "14304",
+          "refcount": "0"
+        },
+        "i2c_dev": {
+          "size": "14080",
+          "refcount": "0"
+        },
+        "i2c_i801": {
+          "size": "22799",
+          "refcount": "0"
+        },
+        "nfsd": {
+          "size": "297498",
+          "refcount": "2"
+        },
+        "auth_rpcgss": {
+          "size": "60078",
+          "refcount": "1"
+        },
+        "nfs_acl": {
+          "size": "12883",
+          "refcount": "1"
+        },
+        "nfs": {
+          "size": "249163",
+          "refcount": "0"
+        },
+        "lockd": {
+          "size": "95174",
+          "refcount": "2"
+        },
+        "sunrpc": {
+          "size": "302729",
+          "refcount": "6"
+        },
+        "fscache": {
+          "size": "64236",
+          "refcount": "1"
+        },
+        "binfmt_misc": {
+          "size": "17508",
+          "refcount": "1"
+        },
+        "tg3": {
+          "size": "179247",
+          "refcount": "0"
+        },
+        "ptp": {
+          "size": "19534",
+          "refcount": "1"
+        },
+        "sdhci_pci": {
+          "size": "23392",
+          "refcount": "0"
+        },
+        "i915": {
+          "size": "993210",
+          "refcount": "2"
+        },
+        "ahci": {
+          "size": "30167",
+          "refcount": "2"
+        },
+        "libahci": {
+          "size": "32533",
+          "refcount": "1"
+        },
+        "sdhci": {
+          "size": "44159",
+          "refcount": "1"
+        },
+        "pps_core": {
+          "size": "19381",
+          "refcount": "1"
+        },
+        "i2c_algo_bit": {
+          "size": "13564",
+          "refcount": "1"
+        },
+        "drm_kms_helper": {
+          "size": "99872",
+          "refcount": "1"
+        },
+        "drm": {
+          "size": "318542",
+          "refcount": "4"
+        },
+        "video": {
+          "size": "20569",
+          "refcount": "1"
+        }
+      }
+    },
+    "lsb": {
+      "id": "Ubuntu",
+      "release": "14.04",
+      "codename": "trusty",
+      "description": "Ubuntu 14.04.1 LTS"
+    },
+    "os": "linux",
+    "os_version": "3.17.0-031700-generic",
+    "platform": "ubuntu",
+    "platform_version": "14.04",
+    "platform_family": "debian",
+    "cpu": {
+      "0": {
+        "vendor_id": "GenuineIntel",
+        "family": "6",
+        "model": "42",
+        "model_name": "Intel(R) Celeron(R) CPU 847 @ 1.10GHz",
+        "stepping": "7",
+        "mhz": "1079.632",
+        "cache_size": "2048 KB",
+        "physical_id": "0",
+        "core_id": "0",
+        "cores": "2",
+        "flags": [
+          "fpu",
+          "vme",
+          "de",
+          "pse",
+          "tsc",
+          "msr",
+          "pae",
+          "mce",
+          "cx8",
+          "apic",
+          "sep",
+          "mtrr",
+          "pge",
+          "mca",
+          "cmov",
+          "pat",
+          "pse36",
+          "clflush",
+          "dts",
+          "acpi",
+          "mmx",
+          "fxsr",
+          "sse",
+          "sse2",
+          "ss",
+          "ht",
+          "tm",
+          "pbe",
+          "syscall",
+          "nx",
+          "rdtscp",
+          "lm",
+          "constant_tsc",
+          "arch_perfmon",
+          "pebs",
+          "bts",
+          "rep_good",
+          "nopl",
+          "xtopology",
+          "nonstop_tsc",
+          "aperfmperf",
+          "eagerfpu",
+          "pni",
+          "pclmulqdq",
+          "dtes64",
+          "monitor",
+          "ds_cpl",
+          "vmx",
+          "est",
+          "tm2",
+          "ssse3",
+          "cx16",
+          "xtpr",
+          "pdcm",
+          "pcid",
+          "sse4_1",
+          "sse4_2",
+          "x2apic",
+          "popcnt",
+          "tsc_deadline_timer",
+          "xsave",
+          "lahf_lm",
+          "arat",
+          "epb",
+          "pln",
+          "pts",
+          "dtherm",
+          "tpr_shadow",
+          "vnmi",
+          "flexpriority",
+          "ept",
+          "vpid",
+          "xsaveopt"
+        ]
+      },
+      "1": {
+        "vendor_id": "GenuineIntel",
+        "family": "6",
+        "model": "42",
+        "model_name": "Intel(R) Celeron(R) CPU 847 @ 1.10GHz",
+        "stepping": "7",
+        "mhz": "1082.339",
+        "cache_size": "2048 KB",
+        "physical_id": "0",
+        "core_id": "1",
+        "cores": "2",
+        "flags": [
+          "fpu",
+          "vme",
+          "de",
+          "pse",
+          "tsc",
+          "msr",
+          "pae",
+          "mce",
+          "cx8",
+          "apic",
+          "sep",
+          "mtrr",
+          "pge",
+          "mca",
+          "cmov",
+          "pat",
+          "pse36",
+          "clflush",
+          "dts",
+          "acpi",
+          "mmx",
+          "fxsr",
+          "sse",
+          "sse2",
+          "ss",
+          "ht",
+          "tm",
+          "pbe",
+          "syscall",
+          "nx",
+          "rdtscp",
+          "lm",
+          "constant_tsc",
+          "arch_perfmon",
+          "pebs",
+          "bts",
+          "rep_good",
+          "nopl",
+          "xtopology",
+          "nonstop_tsc",
+          "aperfmperf",
+          "eagerfpu",
+          "pni",
+          "pclmulqdq",
+          "dtes64",
+          "monitor",
+          "ds_cpl",
+          "vmx",
+          "est",
+          "tm2",
+          "ssse3",
+          "cx16",
+          "xtpr",
+          "pdcm",
+          "pcid",
+          "sse4_1",
+          "sse4_2",
+          "x2apic",
+          "popcnt",
+          "tsc_deadline_timer",
+          "xsave",
+          "lahf_lm",
+          "arat",
+          "epb",
+          "pln",
+          "pts",
+          "dtherm",
+          "tpr_shadow",
+          "vnmi",
+          "flexpriority",
+          "ept",
+          "vpid",
+          "xsaveopt"
+        ]
+      },
+      "total": 2,
+      "real": 1
+    },
+    "keys": {
+      "ssh": {
+        "host_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCxDj75wVlUYN8nidelKQemcj0qiUqm1xlnQW02qRi5s/iGfVY7NU5cugUqx0CxFqoOnji4BuAdmAGyfUqNOFeXdVdfc5iJzgJHQtaP+pZ5z7FpOq0nuhWIQSdTMmW2MPwqb9sgB6TVN1KQ5t+sLfZ3LGM3WODTXYfDDHTVoAJxKTkWlfdpXHfgWs46rq+2fbo/aby0ulS6tK0AsbOSxfejiiDK/7S6mXzrULwalr4s4afv0MsQwjAxEhFejMXuPXoeYoqVTsqCxt+vZYZAwtIb9s2fPi2MblqwdbWeMpPiEWhJThrFWlHhGgbO5IE6ojQim5JS/NckdI7eTVe9HoJ9",
+        "host_dsa_public": "AAAAB3NzaC1kc3MAAACBALsGMJaSYBlVCoLLgS7z+bZGcdGr50jsRZJvFEeOOiUv5WVOdkPYEE700NLlw2zEiOKevHAERtrWi08MZg3E+3K5M/qMJMcEPqYuDDzqxLrg+eFR/CBjL9jV/QOUY/uvJCgB9mpWEU70BWCZTZTKMR+QXskMRxNg8K+zFI6EPeBvAAAAFQC0a9CxgcVeiMJ8VcHg5kjqx9c2AQAAAIEAiHAuNjKpNoaZAQh4Xoh3r5BRlfeHWqHg0NMlN71ARSAjEYl+ccRuM7IP+pyMUr294LOwWjpX1PpATZlL/faKniu6z8Z9VGGBbsTaeTtFFpSLRlMQoQgfQz0ZedZsHgUdA5FFMCOCDqCwWZm53OqvtJhlFBU8nMj22Qacl3yPZ7wAAACAd2dySG4W0ESg/ks1M4iD4y/a5DdfGhTbhZiZmX4f5MwGUebWXa6pYpZWQtJYzcqq5lA/6/SIlH5tTVjjR1zIvR+eBEkG96uMpAz+PmlGkLPDo54iQyNBmBAtms4esmGD6ZhoviH+qqF1MbPbJ/10FzgPV5d5COuBrgMorworquY=",
+        "host_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNr7t+57Kdd/tLfyoySoed6UFFF0CosGWy7n0h0tDyX9DbHIynptzhezyPiGTOZWupYS+IibVjD6zArEaTYLXtw=",
+        "host_ecdsa_type": "ecdsa-sha2-nistp256"
+      }
+    },
+    "memory": {
+      "swap": {
+        "cached": "11776kB",
+        "total": "2031612kB",
+        "free": "1888648kB"
+      },
+      "total": "1916008kB",
+      "free": "100436kB",
+      "buffers": "59032kB",
+      "cached": "858124kB",
+      "active": "809408kB",
+      "inactive": "759380kB",
+      "dirty": "476kB",
+      "writeback": "0kB",
+      "anon_pages": "649640kB",
+      "mapped": "129504kB",
+      "slab": "135736kB",
+      "slab_reclaimable": "80064kB",
+      "slab_unreclaim": "55672kB",
+      "page_tables": "20368kB",
+      "nfs_unstable": "0kB",
+      "bounce": "0kB",
+      "commit_limit": "2989616kB",
+      "committed_as": "2346256kB",
+      "vmalloc_total": "34359738367kB",
+      "vmalloc_used": "353524kB",
+      "vmalloc_chunk": "34359369088kB"
+    },
+    "uptime_seconds": 331443,
+    "uptime": "3 days 20 hours 04 minutes 03 seconds",
+    "idletime_seconds": 153906,
+    "idletime": "1 day 18 hours 45 minutes 06 seconds",
+    "chef_packages": {
+      "chef": {
+        "version": "11.16.4",
+        "chef_root": "/var/lib/gems/1.9.1/gems/chef-11.16.4/lib"
+      },
+      "ohai": {
+        "version": "7.4.0",
+        "ohai_root": "/var/lib/gems/1.9.1/gems/ohai-7.4.0/lib/ohai"
+      }
+    },
+    "virtualization": {
+      "systems": {
+        "kvm": "host"
+      },
+      "system": "kvm",
+      "role": "host"
+    },
+    "dmi": {
+      "dmidecode_version": "2.12",
+      "smbios_version": "2.7",
+      "structures": {
+        "count": "8",
+        "size": "335"
+      },
+      "bios": {
+        "all_records": [
+          {
+            "record_id": "0x0000",
+            "size": "0",
+            "application_identifier": "BIOS Information",
+            "Vendor": "coreboot",
+            "Version": "4.0-6588-g4acd8ea-dirty",
+            "Release Date": "09/04/2014",
+            "ROM Size": "8192 kB",
+            "Characteristics": {
+              "PCI is supported": null,
+              "PC Card (PCMCIA) is supported": null,
+              "BIOS is upgradeable": null,
+              "Selectable boot is supported": null,
+              "ACPI is supported": null,
+              "Targeted content distribution is supported": null
+            },
+            "BIOS Revision": "4.0",
+            "Firmware Revision": "0.0"
+          }
+        ],
+        "vendor": "coreboot",
+        "version": "4.0-6588-g4acd8ea-dirty",
+        "release_date": "09/04/2014",
+        "rom_size": "8192 kB",
+        "bios_revision": "4.0",
+        "firmware_revision": "0.0"
+      },
+      "system": {
+        "all_records": [
+          {
+            "record_id": "0x0001",
+            "size": "1",
+            "application_identifier": "System Information",
+            "Manufacturer": "Google",
+            "Product Name": "Parrot",
+            "Version": "1.0",
+            "Serial Number": "123456789",
+            "UUID": "Not Settable",
+            "Wake-up Type": "Reserved",
+            "SKU Number": "Not Specified",
+            "Family": "Not Specified"
+          }
+        ],
+        "manufacturer": "Google",
+        "product_name": "Parrot",
+        "version": "1.0",
+        "serial_number": "123456789",
+        "uuid": "Not Settable",
+        "wake_up_type": "Reserved",
+        "sku_number": "Not Specified",
+        "family": "Not Specified"
+      },
+      "base_board": {
+        "all_records": [
+          {
+            "record_id": "0x0002",
+            "size": "2",
+            "application_identifier": "Base Board Information",
+            "Manufacturer": "Google",
+            "Product Name": "Parrot",
+            "Version": "1.0",
+            "Serial Number": "123456789"
+          }
+        ],
+        "manufacturer": "Google",
+        "product_name": "Parrot",
+        "version": "1.0",
+        "serial_number": "123456789"
+      },
+      "chassis": {
+        "all_records": [
+          {
+            "record_id": "0x0003",
+            "size": "3",
+            "application_identifier": "Chassis Information",
+            "Manufacturer": "Google",
+            "Type": "Desktop",
+            "Lock": "Not Present",
+            "Version": "Not Specified",
+            "Serial Number": "Not Specified",
+            "Asset Tag": "Not Specified",
+            "Boot-up State": "Safe",
+            "Power Supply State": "Safe",
+            "Thermal State": "Safe",
+            "Security Status": "None",
+            "OEM Information": "0x00000000",
+            "Height": "Unspecified",
+            "Number Of Power Cords": "Unspecified",
+            "Contained Elements": "0"
+          }
+        ],
+        "manufacturer": "Google",
+        "type": "Desktop",
+        "lock": "Not Present",
+        "version": "Not Specified",
+        "serial_number": "Not Specified",
+        "asset_tag": "Not Specified",
+        "boot_up_state": "Safe",
+        "power_supply_state": "Safe",
+        "thermal_state": "Safe",
+        "security_status": "None",
+        "oem_information": "0x00000000",
+        "height": "Unspecified",
+        "number_of_power_cords": "Unspecified",
+        "contained_elements": "0"
+      },
+      "processor": {
+        "all_records": [
+          {
+            "record_id": "0x0004",
+            "size": "4",
+            "application_identifier": "End Of Table",
+            "Socket Designation": "Not Specified",
+            "Type": "Other",
+            "Family": "Pentium Pro",
+            "Manufacturer": "GenuineIntel",
+            "ID": "A7 06 02 00 FF FB EB BF",
+            "Signature": "Type 0, Family 6, Model 42, Stepping 7",
+            "Flags": {
+              "FPU (Floating-point unit on-chip)": null,
+              "VME (Virtual mode extension)": null,
+              "DE (Debugging extension)": null,
+              "PSE (Page size extension)": null,
+              "TSC (Time stamp counter)": null,
+              "MSR (Model specific registers)": null,
+              "PAE (Physical address extension)": null,
+              "MCE (Machine check exception)": null,
+              "CX8 (CMPXCHG8 instruction supported)": null,
+              "APIC (On-chip APIC hardware supported)": null,
+              "SEP (Fast system call)": null,
+              "MTRR (Memory type range registers)": null,
+              "PGE (Page global enable)": null,
+              "MCA (Machine check architecture)": null,
+              "CMOV (Conditional move instruction supported)": null,
+              "PAT (Page attribute table)": null,
+              "PSE-36 (36-bit page size extension)": null,
+              "CLFSH (CLFLUSH instruction supported)": null,
+              "DS (Debug store)": null,
+              "ACPI (ACPI supported)": null,
+              "MMX (MMX technology supported)": null,
+              "FXSR (FXSAVE and FXSTOR instructions supported)": null,
+              "SSE (Streaming SIMD extensions)": null,
+              "SSE2 (Streaming SIMD extensions 2)": null,
+              "SS (Self-snoop)": null,
+              "HTT (Multi-threading)": null,
+              "TM (Thermal monitor supported)": null,
+              "PBE (Pending break enabled)": null
+            },
+            "Version": "          Intel(R) Celeron(R) CPU 847 @ 1.10GHz",
+            "Voltage": "Unknown",
+            "External Clock": "Unknown",
+            "Max Speed": "Unknown",
+            "Current Speed": "Unknown",
+            "Status": "Enabled",
+            "Upgrade": "Other",
+            "L1 Cache Handle": "Not Provided",
+            "L2 Cache Handle": "Not Provided",
+            "L3 Cache Handle": "Not Provided",
+            "Serial Number": "Not Specified",
+            "Asset Tag": "Not Specified",
+            "Part Number": "Not Specified",
+            "Core Count": "16",
+            "Characteristics": "None",
+            "Reference Designation": "trackpad",
+            "Type Instance": "20",
+            "Bus Address": "0000:67:00.0"
+          }
+        ],
+        "socket_designation": "Not Specified",
+        "type": "Other",
+        "family": "Pentium Pro",
+        "manufacturer": "GenuineIntel",
+        "id": "A7 06 02 00 FF FB EB BF",
+        "signature": "Type 0, Family 6, Model 42, Stepping 7",
+        "version": "          Intel(R) Celeron(R) CPU 847 @ 1.10GHz",
+        "voltage": "Unknown",
+        "external_clock": "Unknown",
+        "max_speed": "Unknown",
+        "current_speed": "Unknown",
+        "status": "Enabled",
+        "upgrade": "Other",
+        "l1_cache_handle": "Not Provided",
+        "l2_cache_handle": "Not Provided",
+        "l3_cache_handle": "Not Provided",
+        "serial_number": "Not Specified",
+        "asset_tag": "Not Specified",
+        "part_number": "Not Specified",
+        "core_count": "16",
+        "characteristics": "None",
+        "reference_designation": "trackpad",
+        "type_instance": "20",
+        "bus_address": "0000:67:00.0"
+      }
+    },
+    "root_group": "root",
+    "gce": {
+    },
+    "command": {
+      "ps": "ps -ef"
+    },
+    "block_device": {
+      "sda": {
+        "size": "31277232",
+        "removable": "0",
+        "model": "SanDisk SSD U100",
+        "rev": "6.14",
+        "state": "running",
+        "timeout": "30",
+        "vendor": "ATA"
+      },
+      "dm-0": {
+        "size": "26705920",
+        "removable": "0"
+      },
+      "dm-1": {
+        "size": "4063232",
+        "removable": "0"
+      },
+      "dm-2": {
+        "size": "209715200",
+        "removable": "0"
+      },
+      "ram0": {
+        "size": "131072",
+        "removable": "0"
+      },
+      "ram1": {
+        "size": "131072",
+        "removable": "0"
+      },
+      "ram2": {
+        "size": "131072",
+        "removable": "0"
+      },
+      "ram3": {
+        "size": "131072",
+        "removable": "0"
+      },
+      "ram4": {
+        "size": "131072",
+        "removable": "0"
+      },
+      "ram5": {
+        "size": "131072",
+        "removable": "0"
+      },
+      "ram6": {
+        "size": "131072",
+        "removable": "0"
+      },
+      "ram7": {
+        "size": "131072",
+        "removable": "0"
+      },
+      "ram8": {
+        "size": "131072",
+        "removable": "0"
+      },
+      "ram9": {
+        "size": "131072",
+        "removable": "0"
+      },
+      "loop0": {
+        "size": "209715200",
+        "removable": "0"
+      },
+      "loop1": {
+        "size": "4194304",
+        "removable": "0"
+      },
+      "loop2": {
+        "size": "0",
+        "removable": "0"
+      },
+      "loop3": {
+        "size": "0",
+        "removable": "0"
+      },
+      "loop4": {
+        "size": "0",
+        "removable": "0"
+      },
+      "loop5": {
+        "size": "0",
+        "removable": "0"
+      },
+      "loop6": {
+        "size": "0",
+        "removable": "0"
+      },
+      "loop7": {
+        "size": "0",
+        "removable": "0"
+      },
+      "ram10": {
+        "size": "131072",
+        "removable": "0"
+      },
+      "ram11": {
+        "size": "131072",
+        "removable": "0"
+      },
+      "ram12": {
+        "size": "131072",
+        "removable": "0"
+      },
+      "ram13": {
+        "size": "131072",
+        "removable": "0"
+      },
+      "ram14": {
+        "size": "131072",
+        "removable": "0"
+      },
+      "ram15": {
+        "size": "131072",
+        "removable": "0"
+      }
+    },
+    "hostname": "tiny",
+    "machinename": "tiny",
+    "fqdn": "tiny",
+    "domain": null,
+    "cloud": {
+      "public_ips": [
+
+      ],
+      "private_ips": [
+
+      ],
+      "public_ipv4": [
+
+      ],
+      "local_ipv4": [
+
+      ]
+    },
+    "ohai_time": 1417128592.1494453,
+    "etc": {
+      "passwd": {
+        "root": {
+          "dir": "/root",
+          "gid": 0,
+          "uid": 0,
+          "shell": "/bin/bash",
+          "gecos": "root"
+        },
+        "daemon": {
+          "dir": "/usr/sbin",
+          "gid": 1,
+          "uid": 1,
+          "shell": "/usr/sbin/nologin",
+          "gecos": "daemon"
+        },
+        "bin": {
+          "dir": "/bin",
+          "gid": 2,
+          "uid": 2,
+          "shell": "/usr/sbin/nologin",
+          "gecos": "bin"
+        },
+        "sys": {
+          "dir": "/dev",
+          "gid": 3,
+          "uid": 3,
+          "shell": "/usr/sbin/nologin",
+          "gecos": "sys"
+        },
+        "sync": {
+          "dir": "/bin",
+          "gid": 65534,
+          "uid": 4,
+          "shell": "/bin/sync",
+          "gecos": "sync"
+        },
+        "games": {
+          "dir": "/usr/games",
+          "gid": 60,
+          "uid": 5,
+          "shell": "/usr/sbin/nologin",
+          "gecos": "games"
+        },
+        "man": {
+          "dir": "/var/cache/man",
+          "gid": 12,
+          "uid": 6,
+          "shell": "/usr/sbin/nologin",
+          "gecos": "man"
+        },
+        "lp": {
+          "dir": "/var/spool/lpd",
+          "gid": 7,
+          "uid": 7,
+          "shell": "/usr/sbin/nologin",
+          "gecos": "lp"
+        },
+        "mail": {
+          "dir": "/var/mail",
+          "gid": 8,
+          "uid": 8,
+          "shell": "/usr/sbin/nologin",
+          "gecos": "mail"
+        },
+        "news": {
+          "dir": "/var/spool/news",
+          "gid": 9,
+          "uid": 9,
+          "shell": "/usr/sbin/nologin",
+          "gecos": "news"
+        },
+        "uucp": {
+          "dir": "/var/spool/uucp",
+          "gid": 10,
+          "uid": 10,
+          "shell": "/usr/sbin/nologin",
+          "gecos": "uucp"
+        },
+        "proxy": {
+          "dir": "/bin",
+          "gid": 13,
+          "uid": 13,
+          "shell": "/usr/sbin/nologin",
+          "gecos": "proxy"
+        },
+        "www-data": {
+          "dir": "/var/www",
+          "gid": 33,
+          "uid": 33,
+          "shell": "/usr/sbin/nologin",
+          "gecos": "www-data"
+        },
+        "backup": {
+          "dir": "/var/backups",
+          "gid": 34,
+          "uid": 34,
+          "shell": "/usr/sbin/nologin",
+          "gecos": "backup"
+        },
+        "list": {
+          "dir": "/var/list",
+          "gid": 38,
+          "uid": 38,
+          "shell": "/usr/sbin/nologin",
+          "gecos": "Mailing List Manager"
+        },
+        "irc": {
+          "dir": "/var/run/ircd",
+          "gid": 39,
+          "uid": 39,
+          "shell": "/usr/sbin/nologin",
+          "gecos": "ircd"
+        },
+        "gnats": {
+          "dir": "/var/lib/gnats",
+          "gid": 41,
+          "uid": 41,
+          "shell": "/usr/sbin/nologin",
+          "gecos": "Gnats Bug-Reporting System (admin)"
+        },
+        "nobody": {
+          "dir": "/nonexistent",
+          "gid": 65534,
+          "uid": 65534,
+          "shell": "/usr/sbin/nologin",
+          "gecos": "nobody"
+        },
+        "libuuid": {
+          "dir": "/var/lib/libuuid",
+          "gid": 101,
+          "uid": 100,
+          "shell": "",
+          "gecos": ""
+        },
+        "syslog": {
+          "dir": "/home/syslog",
+          "gid": 104,
+          "uid": 101,
+          "shell": "/bin/false",
+          "gecos": ""
+        },
+        "messagebus": {
+          "dir": "/var/run/dbus",
+          "gid": 106,
+          "uid": 102,
+          "shell": "/bin/false",
+          "gecos": ""
+        },
+        "landscape": {
+          "dir": "/var/lib/landscape",
+          "gid": 109,
+          "uid": 103,
+          "shell": "/bin/false",
+          "gecos": ""
+        },
+        "sshd": {
+          "dir": "/var/run/sshd",
+          "gid": 65534,
+          "uid": 104,
+          "shell": "/usr/sbin/nologin",
+          "gecos": ""
+        },
+        "nat": {
+          "dir": "/home/nat",
+          "gid": 1000,
+          "uid": 1000,
+          "shell": "/bin/zsh",
+          "gecos": "nat,,,"
+        },
+        "usbmux": {
+          "dir": "/home/usbmux",
+          "gid": 46,
+          "uid": 105,
+          "shell": "/bin/false",
+          "gecos": "usbmux daemon,,,"
+        },
+        "colord": {
+          "dir": "/var/lib/colord",
+          "gid": 114,
+          "uid": 106,
+          "shell": "/bin/false",
+          "gecos": "colord colour management daemon,,,"
+        },
+        "lightdm": {
+          "dir": "/var/lib/lightdm",
+          "gid": 117,
+          "uid": 107,
+          "shell": "/bin/false",
+          "gecos": "Light Display Manager"
+        },
+        "kernoops": {
+          "dir": "/",
+          "gid": 65534,
+          "uid": 108,
+          "shell": "/bin/false",
+          "gecos": "Kernel Oops Tracking Daemon,,,"
+        },
+        "avahi": {
+          "dir": "/var/run/avahi-daemon",
+          "gid": 119,
+          "uid": 109,
+          "shell": "/bin/false",
+          "gecos": "Avahi mDNS daemon,,,"
+        },
+        "pulse": {
+          "dir": "/var/run/pulse",
+          "gid": 120,
+          "uid": 110,
+          "shell": "/bin/false",
+          "gecos": "PulseAudio daemon,,,"
+        },
+        "avahi-autoipd": {
+          "dir": "/var/lib/avahi-autoipd",
+          "gid": 122,
+          "uid": 111,
+          "shell": "/bin/false",
+          "gecos": "Avahi autoip daemon,,,"
+        },
+        "dnsmasq": {
+          "dir": "/var/lib/misc",
+          "gid": 65534,
+          "uid": 112,
+          "shell": "/bin/false",
+          "gecos": "dnsmasq,,,"
+        },
+        "hplip": {
+          "dir": "/var/run/hplip",
+          "gid": 7,
+          "uid": 113,
+          "shell": "/bin/false",
+          "gecos": "HPLIP system user,,,"
+        },
+        "saned": {
+          "dir": "/home/saned",
+          "gid": 123,
+          "uid": 114,
+          "shell": "/bin/false",
+          "gecos": ""
+        },
+        "whoopsie": {
+          "dir": "/nonexistent",
+          "gid": 124,
+          "uid": 115,
+          "shell": "/bin/false",
+          "gecos": ""
+        },
+        "speech-dispatcher": {
+          "dir": "/var/run/speech-dispatcher",
+          "gid": 29,
+          "uid": 116,
+          "shell": "/bin/sh",
+          "gecos": "Speech Dispatcher,,,"
+        },
+        "mopidy": {
+          "dir": "/var/lib/mopidy",
+          "gid": 29,
+          "uid": 117,
+          "shell": "/bin/false",
+          "gecos": ""
+        },
+        "statd": {
+          "dir": "/var/lib/nfs",
+          "gid": 65534,
+          "uid": 118,
+          "shell": "/bin/false",
+          "gecos": ""
+        },
+        "mpdscribble": {
+          "dir": "/var/cache/mpdscribble",
+          "gid": 126,
+          "uid": 119,
+          "shell": "/bin/false",
+          "gecos": ""
+        }
+      },
+      "group": {
+        "root": {
+          "gid": 0,
+          "members": [
+
+          ]
+        },
+        "daemon": {
+          "gid": 1,
+          "members": [
+
+          ]
+        },
+        "bin": {
+          "gid": 2,
+          "members": [
+
+          ]
+        },
+        "sys": {
+          "gid": 3,
+          "members": [
+
+          ]
+        },
+        "adm": {
+          "gid": 4,
+          "members": [
+            "syslog",
+            "nat"
+          ]
+        },
+        "tty": {
+          "gid": 5,
+          "members": [
+
+          ]
+        },
+        "disk": {
+          "gid": 6,
+          "members": [
+
+          ]
+        },
+        "lp": {
+          "gid": 7,
+          "members": [
+
+          ]
+        },
+        "mail": {
+          "gid": 8,
+          "members": [
+
+          ]
+        },
+        "news": {
+          "gid": 9,
+          "members": [
+
+          ]
+        },
+        "uucp": {
+          "gid": 10,
+          "members": [
+
+          ]
+        },
+        "man": {
+          "gid": 12,
+          "members": [
+
+          ]
+        },
+        "proxy": {
+          "gid": 13,
+          "members": [
+
+          ]
+        },
+        "kmem": {
+          "gid": 15,
+          "members": [
+
+          ]
+        },
+        "dialout": {
+          "gid": 20,
+          "members": [
+
+          ]
+        },
+        "fax": {
+          "gid": 21,
+          "members": [
+
+          ]
+        },
+        "voice": {
+          "gid": 22,
+          "members": [
+
+          ]
+        },
+        "cdrom": {
+          "gid": 24,
+          "members": [
+            "nat"
+          ]
+        },
+        "floppy": {
+          "gid": 25,
+          "members": [
+
+          ]
+        },
+        "tape": {
+          "gid": 26,
+          "members": [
+
+          ]
+        },
+        "sudo": {
+          "gid": 27,
+          "members": [
+            "nat"
+          ]
+        },
+        "audio": {
+          "gid": 29,
+          "members": [
+            "pulse"
+          ]
+        },
+        "dip": {
+          "gid": 30,
+          "members": [
+            "nat"
+          ]
+        },
+        "www-data": {
+          "gid": 33,
+          "members": [
+
+          ]
+        },
+        "backup": {
+          "gid": 34,
+          "members": [
+
+          ]
+        },
+        "operator": {
+          "gid": 37,
+          "members": [
+
+          ]
+        },
+        "list": {
+          "gid": 38,
+          "members": [
+
+          ]
+        },
+        "irc": {
+          "gid": 39,
+          "members": [
+
+          ]
+        },
+        "src": {
+          "gid": 40,
+          "members": [
+
+          ]
+        },
+        "gnats": {
+          "gid": 41,
+          "members": [
+
+          ]
+        },
+        "shadow": {
+          "gid": 42,
+          "members": [
+
+          ]
+        },
+        "utmp": {
+          "gid": 43,
+          "members": [
+
+          ]
+        },
+        "video": {
+          "gid": 44,
+          "members": [
+
+          ]
+        },
+        "sasl": {
+          "gid": 45,
+          "members": [
+
+          ]
+        },
+        "plugdev": {
+          "gid": 46,
+          "members": [
+            "nat"
+          ]
+        },
+        "staff": {
+          "gid": 50,
+          "members": [
+
+          ]
+        },
+        "games": {
+          "gid": 60,
+          "members": [
+
+          ]
+        },
+        "users": {
+          "gid": 100,
+          "members": [
+
+          ]
+        },
+        "nogroup": {
+          "gid": 65534,
+          "members": [
+
+          ]
+        },
+        "libuuid": {
+          "gid": 101,
+          "members": [
+
+          ]
+        },
+        "netdev": {
+          "gid": 102,
+          "members": [
+            "nat",
+            "lightdm"
+          ]
+        },
+        "crontab": {
+          "gid": 103,
+          "members": [
+
+          ]
+        },
+        "syslog": {
+          "gid": 104,
+          "members": [
+
+          ]
+        },
+        "fuse": {
+          "gid": 105,
+          "members": [
+
+          ]
+        },
+        "messagebus": {
+          "gid": 106,
+          "members": [
+
+          ]
+        },
+        "mlocate": {
+          "gid": 107,
+          "members": [
+
+          ]
+        },
+        "ssh": {
+          "gid": 108,
+          "members": [
+
+          ]
+        },
+        "landscape": {
+          "gid": 109,
+          "members": [
+
+          ]
+        },
+        "nat": {
+          "gid": 1000,
+          "members": [
+
+          ]
+        },
+        "lpadmin": {
+          "gid": 110,
+          "members": [
+            "nat"
+          ]
+        },
+        "sambashare": {
+          "gid": 111,
+          "members": [
+            "nat"
+          ]
+        },
+        "utempter": {
+          "gid": 112,
+          "members": [
+
+          ]
+        },
+        "scanner": {
+          "gid": 113,
+          "members": [
+            "saned"
+          ]
+        },
+        "colord": {
+          "gid": 114,
+          "members": [
+
+          ]
+        },
+        "ssl-cert": {
+          "gid": 115,
+          "members": [
+
+          ]
+        },
+        "bluetooth": {
+          "gid": 116,
+          "members": [
+
+          ]
+        },
+        "lightdm": {
+          "gid": 117,
+          "members": [
+
+          ]
+        },
+        "nopasswdlogin": {
+          "gid": 118,
+          "members": [
+
+          ]
+        },
+        "avahi": {
+          "gid": 119,
+          "members": [
+
+          ]
+        },
+        "pulse": {
+          "gid": 120,
+          "members": [
+
+          ]
+        },
+        "pulse-access": {
+          "gid": 121,
+          "members": [
+
+          ]
+        },
+        "avahi-autoipd": {
+          "gid": 122,
+          "members": [
+
+          ]
+        },
+        "saned": {
+          "gid": 123,
+          "members": [
+
+          ]
+        },
+        "whoopsie": {
+          "gid": 124,
+          "members": [
+
+          ]
+        },
+        "docker": {
+          "gid": 125,
+          "members": [
+            "nat"
+          ]
+        },
+        "mpdscribble": {
+          "gid": 126,
+          "members": [
+
+          ]
+        }
+      }
+    },
+    "current_user": "root",
+    "init_package": "init",
+    "recipes": [
+      "nat::default",
+      "nat::zsh",
+      "nat::git",
+      "nat::ssh",
+      "nat::tmux",
+      "nat::vim",
+      "nat::ctags",
+      "nat::shell",
+      "nat::scripts",
+      "nat::python",
+      "nat::ruby",
+      "nat::go_lang",
+      "nat::tools",
+      "nat::nodejs",
+      "nat::aws_tools",
+      "nat::weechat",
+      "nat::source_directory",
+      "nat::various",
+      "nat::the_silver_searcher",
+      "nat::jq"
+    ],
+    "roles": [
+      "linux_workstation"
+    ]
+  },
+  "run_list": [
+    "role[linux_workstation]"
+  ]
+}
