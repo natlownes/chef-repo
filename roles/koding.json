@@ -1,0 +1,10 @@
+{
+  "default_attributes": {
+    "nat": {
+      "username": "natlownes"
+    }
+  },
+  "run_list": [
+    "recipe[nat::default]"
+  ]
+}

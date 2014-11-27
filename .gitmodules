@@ -1,0 +1,6 @@
+[submodule "apt"]
+	path = cookbooks/apt
+	url = git@github.com:opscode-cookbooks/apt.git
+[submodule "nat"]
+	path = cookbooks/nat
+	url = git@github.com:natlownes/nat-dotfiles-cookbook.git
