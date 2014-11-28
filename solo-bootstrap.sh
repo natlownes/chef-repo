@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 #[ `whoami` = root ] || exec sudo -E bash $0
 os=$(uname)
+host=$(hostname)
+metal_hosts=(doublev tiny slab-linux)
 role_name=""
 
 git remote update origin
@@ -17,6 +19,13 @@ if [ $os = 'Linux' ]; then
   role_name="linux_workstation"
 fi
 
+for h in "${metal_hosts[@]}"
+do
+    if [ "$h" == $host ]; then
+      role_name="linux_desktop"
+    fi
+done
+
 if [ $os = 'Darwin' ]; then
   port install ruby19
   role_name="osx_workstation"
@@ -28,4 +37,5 @@ fi
 #librarian-chef install
 
 #sudo chef-solo -j $node_config -c .chef/solo-bootstrap.rb
+echo "running ${role_name}..."
 sudo chef-client -z -r "role[${role_name}]"
