@@ -3,6 +3,8 @@
 os=$(uname)
 host=$(hostname)
 metal_hosts=(doublev tiny slab-linux)
+chef_client=$(which chef-client)
+echo $chef_client
 role_name=""
 
 git remote update origin
@@ -38,4 +40,4 @@ fi
 
 #sudo chef-solo -j $node_config -c .chef/solo-bootstrap.rb
 echo "running ${role_name}..."
-sudo chef-client -z -r "role[${role_name}]"
+sudo $chef_client -z -o "role[${role_name}]"
