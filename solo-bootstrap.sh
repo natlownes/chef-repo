@@ -11,7 +11,6 @@ git remote update origin
 git pull origin master
 git submodule init
 git submodule update
-git submodule foreach git pull origin master
 
 if [ $os = 'Linux' ]; then
   sudo apt-get update
