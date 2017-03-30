@@ -9,8 +9,10 @@ role_name=""
 
 git remote update origin
 git pull origin master
-git submodule init
-git submodule update
+# always grab the master branch of nat cookbook
+git submodule update --remote cookbooks/nat
+
+
 
 if [ $os = 'Linux' ]; then
   sudo apt-get update
