@@ -4,3 +4,7 @@
 [submodule "cookbooks/nat"]
 	path = cookbooks/nat
 	url = https://github.com/natlownes/nat-dotfiles-cookbook.git
+[submodule "cookbooks/compat_resource"]
+	path = cookbooks/compat_resource
+	url = https://github.com/chef-cookbooks/compat_resource.git
+	ref = db8979a  
